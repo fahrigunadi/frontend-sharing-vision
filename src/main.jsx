@@ -9,6 +9,7 @@ import IndexPost from "./Post/Index.jsx";
 import CreatePost from "./Post/Create.jsx";
 import EditPost from "./Post/EditPost.jsx";
 import Preview from "./Preview.jsx";
+import PreviewArticle from "./PreviewArticle.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/preview",
     element: <Preview />,
+  },
+  {
+    path: "/preview/:id",
+    element: <PreviewArticle />,
   }
 ]);
 

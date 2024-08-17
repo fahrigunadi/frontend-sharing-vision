@@ -47,10 +47,13 @@ function Preview() {
       <div className="grid grid-cols-1 md:grid-cols-3 text-center gap-6 px-6">
         {data.map((item) => (
           <div key={item.id}>
-            <a href="#" className="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
+            <Link to={`/preview/${item.id}`} className="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{item.title}</h5>
               <p className="font-normal text-gray-700">{item.content}</p>
-            </a>
+              <div className="w-full text-start mt-3">
+                <small>Category:</small> <span className="bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded">{item.category}</span>
+              </div>
+            </Link>
           </div>
         ))}
       </div>
