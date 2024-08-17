@@ -5,17 +5,28 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
-import App from "./App.jsx";
+import IndexPost from "./Post/Index.jsx";
+import CreatePost from "./Post/Create.jsx";
+import EditPost from "./Post/EditPost.jsx";
+import Preview from "./Preview.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <IndexPost />,
   },
   {
-    path: "/c",
-    element: <App />,
+    path: "/create",
+    element: <CreatePost />,
   },
+  {
+    path: "/:id/edit",
+    element: <EditPost />,
+  },
+  {
+    path: "/preview",
+    element: <Preview />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
