@@ -6,7 +6,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const statuses = ["publish", "draft", "trash"];
-const limit = 2;
+const limit = 10;
 
 function IndexPost() {
   const [data, setData] = useState(null);
